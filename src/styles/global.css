@@ -16,11 +16,14 @@
   font-weight: bold;
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Quicksand";
+}
+
+body {
   background-color: rgb(71, 123, 255);
   display: flex;
   flex-direction: column;
