@@ -1,5 +1,12 @@
+import Wrapper from "../../components/Wrapper";
+import Box from "../../components/Box";
+
 const Home = () => {
-  return <h1>Home</h1>;
+  return (
+    <Wrapper>
+      <Box />
+    </Wrapper>
+  );
 };
 
 export default Home;

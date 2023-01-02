@@ -21,4 +21,11 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Quicksand";
+  background-color: rgb(71, 123, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
 }
