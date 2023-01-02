@@ -1,11 +1,10 @@
-import Wrapper from "../../components/Wrapper";
 import Box from "../../components/Box";
 
 const Home = () => {
   return (
-    <Wrapper>
+    <div className="wrapper">
       <Box />
-    </Wrapper>
+    </div>
   );
 };
 
