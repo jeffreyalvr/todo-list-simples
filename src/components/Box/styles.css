@@ -4,4 +4,73 @@
   background-color: #fff;
   border: 1px solid #dfdfdf;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box .box-header {
+  width: 100%;
+  height: 180px;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 20px;
+}
+
+.box .box-header .text-area {
+  border-radius: 4px;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+}
+
+.box .box-header .text-area:focus-within {
+  border-color: var(--primary);
+}
+
+.box .box-header .text-area .icon {
+  height: 24px;
+  width: 24px;
+  margin: 0 15px;
+  color: var(--disabled);
+}
+
+.box .box-header .text-area input[type="text"] {
+  font-size: 16px;
+  width: 100%;
+  outline: 0;
+  border: none;
+  padding: 15px 15px 15px 0;
+  font-weight: 500;
+}
+
+.box .box-header ul {
+  margin: 15px 0 0 0;
+}
+
+.box .box-header ul li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 6px 2px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.box .box-header ul li:not(:last-child) {
+  margin: 0 8px 0 0;
+}
+
+.box .box-header ul li.active {
+  font-weight: 700;
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
+  cursor: default;
+}
+
+.box .box-content {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
 }
