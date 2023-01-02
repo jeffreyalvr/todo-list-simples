@@ -74,3 +74,19 @@
   height: 100%;
   padding: 20px;
 }
+
+.box .box-content .item {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--disabled);
+}
+
+.box .box-content .item label.completed {
+  text-decoration: line-through;
+}
+
+.box .box-content .item input[type="checkbox"] {
+  margin-right: 15px;
+  height: 15px;
+  width: 15px;
+  outline: 0;
+}
