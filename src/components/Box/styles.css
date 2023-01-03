@@ -1,6 +1,6 @@
 .box {
   width: 100%;
-  height: 550px;
+  height: auto;
   background-color: #fff;
   border: 1px solid #dfdfdf;
   border-radius: 8px;
@@ -10,7 +10,7 @@
 
 .box .box-header {
   width: 100%;
-  height: 180px;
+  height: auto;
   border-bottom: 1px solid #dfdfdf;
   padding: 20px;
 }
@@ -18,6 +18,7 @@
 .box .box-header .text-area {
   border-radius: 4px;
   border: 1px solid #dfdfdf;
+  background-color: #fff;
   border-radius: 4px;
   width: 100%;
   display: flex;
@@ -28,6 +29,7 @@
 
 .box .box-header .text-area:focus-within {
   border-color: var(--primary);
+  transition: ease-in 0.3s;
 }
 
 .box .box-header .text-area .icon {
@@ -53,9 +55,12 @@
 .box .box-header ul li {
   display: inline-block;
   list-style-type: none;
+  border-bottom: 2px solid transparent;
   padding: 6px 2px;
   cursor: pointer;
   text-transform: capitalize;
+  font-weight: 700;
+  color: rgb(194, 194, 194);
 }
 
 .box .box-header ul li:not(:last-child) {
@@ -63,10 +68,10 @@
 }
 
 .box .box-header ul li.active {
-  font-weight: 700;
   border-bottom: 2px solid var(--primary);
   color: var(--primary);
   cursor: default;
+  transition: ease-in 0.3s;
 }
 
 .box .box-content {

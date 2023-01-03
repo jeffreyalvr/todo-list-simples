@@ -1,18 +1,18 @@
 @font-face {
   font-family: "Quicksand";
-  src: url("../static/fonts/Quicksand-Regular.ttf") format(truetype);
+  src: url("../assets/fonts/Quicksand-Regular.ttf") format(truetype);
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Quicksand";
-  src: url("../static/fonts/Quicksand-Medium.ttf") format(truetype);
+  src: url("../assets/fonts/Quicksand-Medium.ttf") format(truetype);
   font-weight: 500;
 }
 
 @font-face {
   font-family: "Quicksand";
-  src: url("../static/fonts/Quicksand-Bold.ttf") format(truetype);
+  src: url("../assets/fonts/Quicksand-Bold.ttf") format(truetype);
   font-weight: bold;
 }
 
