@@ -159,8 +159,12 @@ label.container .checkmark {
   border-radius: 50%;
 }
 
+.dark label.container .checkmark {
+  background-color: #686868;
+}
+
 .container:hover input ~ .checkmark {
-  background-color: var(--disabled);
+  filter: brightness(90%);
 }
 
 .container input:checked ~ .checkmark {
