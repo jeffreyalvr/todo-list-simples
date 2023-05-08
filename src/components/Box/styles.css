@@ -136,12 +136,13 @@
 .item .remover {
   border-radius: 5px;
   background-color: var(--red);
-  padding: 5px 15px;
+  padding: 5px 10px;
   cursor: pointer;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  visibility: hidden;
 }
 
 .item .remover:hover {
@@ -158,6 +159,10 @@
   -ms-user-select: none;
   user-select: none;
   overflow-wrap: break-word;
+}
+
+.item:hover label ~ .remover {
+  visibility: visible;
 }
 
 .dark label.container {
