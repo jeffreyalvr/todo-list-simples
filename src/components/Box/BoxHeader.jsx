@@ -9,6 +9,7 @@ const BoxHeader = ({
   menus,
   todoList,
   setTodoList,
+  primaryColor,
 }) => {
   const changeActiveMenu = (index) => {
     setActiveMenu(index);
@@ -36,7 +37,7 @@ const BoxHeader = ({
   };
 
   return (
-    <div className="box-header">
+    <div className={`box-header ${primaryColor}`}>
       <div className="text-area">
         <FontAwesomeIcon className="icon" icon={faAlignLeft} />
         <input

@@ -5,7 +5,7 @@ import "./styles.css";
 import BoxContent from "./BoxContent";
 import BoxHeader from "./BoxHeader";
 
-const Box = () => {
+const Box = ({ primaryColor }) => {
   const [todoText, setTodoText] = useState("");
   const [todoList, setTodoList] = useState([]);
 
@@ -22,11 +22,13 @@ const Box = () => {
         setActiveMenu={setActiveMenu}
         todoList={todoList}
         setTodoList={setTodoList}
+        primaryColor={primaryColor}
       />
       <BoxContent
         todoList={todoList}
         setTodoList={setTodoList}
         activeMenu={activeMenu}
+        primaryColor={primaryColor}
       />
     </main>
   );
