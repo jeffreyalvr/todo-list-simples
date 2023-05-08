@@ -16,16 +16,16 @@ const Nav = ({
       <div className="temas">
         <div
           className={`item light ${primaryColor} ${!darkTheme ? "active" : ""}`}
-          alt="tema light"
-          title="tema light"
+          alt="tema claro"
+          title="Ativar tema claro"
           onClick={(e) => handleDarkTheme(false)}
         >
           <img src={light_icon} />
         </div>
         <div
           className={`item dark ${primaryColor} ${darkTheme ? "active" : ""} `}
-          alt="tema dark"
-          title="tema dark"
+          alt="tema escuro"
+          title="Ativar tema escuro"
           onClick={(e) => handleDarkTheme(true)}
         >
           <img src={dark_icon} />
@@ -35,37 +35,37 @@ const Nav = ({
         <div
           className="item red"
           alt="vermelho"
-          title="vermelho"
+          title="Tema vermelho"
           onClick={(e) => handleThemeColor("red")}
         ></div>
         <div
           className="item green"
           alt="verde"
-          title="verde"
+          title="Tema verde"
           onClick={(e) => handleThemeColor("green")}
         ></div>
         <div
           className="item blue"
           alt="azul"
-          title="azul"
+          title="Tema azul"
           onClick={(e) => handleThemeColor("blue")}
         ></div>
         <div
           className="item yellow"
           alt="amarelo"
-          title="amarelo"
+          title="Tema amarelo"
           onClick={(e) => handleThemeColor("yellow")}
         ></div>
         <div
           className="item pink"
           alt="rosa"
-          title="rosa"
+          title="Tema rosa"
           onClick={(e) => handleThemeColor("pink")}
         ></div>
         <div
           className="item purple"
           alt="roxo"
-          title="roxo"
+          title="Tema roxo"
           onClick={(e) => handleThemeColor("purple")}
         ></div>
       </div>

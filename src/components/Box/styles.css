@@ -122,11 +122,30 @@
 .box .box-content .item {
   padding: 15px 0;
   border-bottom: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .box.dark .box-content .item {
   padding: 15px 0;
   border-bottom: 1px solid var(--border-dark);
+}
+
+.item .remover {
+  border-radius: 5px;
+  background-color: var(--red);
+  padding: 5px 15px;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item .remover:hover {
+  filter: brightness(90%);
 }
 
 .box .box-content .item label.container {
@@ -139,6 +158,10 @@
   -ms-user-select: none;
   user-select: none;
   overflow-wrap: break-word;
+}
+
+.dark label.container {
+  color: #ddd;
 }
 
 label.container input {

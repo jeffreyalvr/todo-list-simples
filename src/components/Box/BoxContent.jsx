@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
+import delete_icon from "../../assets/icons/delete.png";
 
 const BoxContent = ({
   todoList,
@@ -36,6 +35,9 @@ const BoxContent = ({
               />
               <span className={`checkmark ${primaryColor}`}></span>
             </label>
+            <div className="remover">
+              <img src={delete_icon} alt="remover" title="Remover item" />
+            </div>
           </div>
         ))
       )}
