@@ -1,5 +1,5 @@
 .box {
-  width: 100%;
+  width: auto;
   height: auto;
   background-color: var(--box-bg-light);
   border: 1px solid var(--border-light);
