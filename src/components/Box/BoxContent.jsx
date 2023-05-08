@@ -21,13 +21,14 @@ const BoxContent = ({ todoList, setTodoList, activeMenu, primaryColor }) => {
       ) : (
         todoList.map((item) => (
           <div className="item" key={item.id}>
-            <label className={item.complete ? "completed" : ""}>
+            <label className={`container ${item.complete ? "completed" : ""}`}>
+              {item.description}
               <input
                 type="checkbox"
                 onChange={() => toggleTodoStatus(item.id)}
                 defaultChecked={item.complete}
               />
-              {item.description}
+              <span className={`checkmark ${primaryColor}`}></span>
             </label>
           </div>
         ))
