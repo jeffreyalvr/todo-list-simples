@@ -10,6 +10,7 @@ const BoxHeader = ({
   todoList,
   setTodoList,
   primaryColor,
+  darkTheme,
 }) => {
   const changeActiveMenu = (index) => {
     setActiveMenu(index);

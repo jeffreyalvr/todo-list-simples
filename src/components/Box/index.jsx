@@ -5,7 +5,7 @@ import "./styles.css";
 import BoxContent from "./BoxContent";
 import BoxHeader from "./BoxHeader";
 
-const Box = ({ primaryColor }) => {
+const Box = ({ primaryColor, darkTheme }) => {
   const [todoText, setTodoText] = useState("");
   const [todoList, setTodoList] = useState([]);
 
@@ -13,7 +13,7 @@ const Box = ({ primaryColor }) => {
   const [activeMenu, setActiveMenu] = useState(0);
 
   return (
-    <main className="box">
+    <main className={`box ${darkTheme ? "dark" : "light"}`}>
       <BoxHeader
         todoText={todoText}
         setTodoText={setTodoText}

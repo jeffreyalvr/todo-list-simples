@@ -1,7 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 
-const BoxContent = ({ todoList, setTodoList, activeMenu, primaryColor }) => {
+const BoxContent = ({
+  todoList,
+  setTodoList,
+  activeMenu,
+  primaryColor,
+  darkTheme,
+}) => {
   const toggleTodoStatus = (id) => {
     let newList = [...todoList];
 

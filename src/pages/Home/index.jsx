@@ -5,10 +5,15 @@ import Box from "../../components/Box";
 
 const Home = () => {
   const [primaryColor, setPrimaryColor] = useState("blue");
+  const [darkTheme, setDarkTheme] = useState(false);
 
   useEffect(() => {
-    document.body.style.backgroundColor = `var(--${primaryColor})`;
-  }, [primaryColor]);
+    if (darkTheme === true) {
+      document.body.style.backgroundColor = "#414141";
+    } else {
+      document.body.style.backgroundColor = `var(--${primaryColor})`;
+    }
+  }, [darkTheme, primaryColor]);
 
   const handleThemeColor = (color) => {
     switch (color) {
@@ -33,10 +38,17 @@ const Home = () => {
     }
   };
 
+  const handleDarkTheme = (state) => {
+    setDarkTheme(state);
+  };
+
   return (
     <div className="wrapper">
-      <Nav handleThemeColor={handleThemeColor} />
-      <Box primaryColor={primaryColor} />
+      <Nav
+        handleThemeColor={handleThemeColor}
+        handleDarkTheme={handleDarkTheme}
+      />
+      <Box primaryColor={primaryColor} darkTheme={darkTheme} />
     </div>
   );
 };

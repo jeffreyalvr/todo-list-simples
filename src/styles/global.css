@@ -20,12 +20,19 @@
   --primary: var(--red);
   --disabled: rgb(214, 214, 214);
 
-  --blue: rgb(10, 96, 255);
+  --blue: rgb(50, 154, 255);
   --green: rgb(10, 255, 124);
   --red: rgb(255, 10, 108);
   --yellow: rgb(255, 230, 10);
   --pink: rgb(251, 10, 255);
   --purple: rgb(190, 10, 255);
+
+  --border-light: #dfdfdf;
+  --border-dark: #606060;
+  --box-bg-light: #fff;
+  --box-bg-dark: #474747;
+  --textarea-bg-dark: #585858;
+  --text-dark: #aaaaaa;
 }
 
 * {
