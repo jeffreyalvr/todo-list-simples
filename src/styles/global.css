@@ -17,9 +17,16 @@
 }
 
 :root {
-  --primary: rgb(10, 96, 255);
-  --secondary: rgb(255, 10, 108);
+  --primary: var(--blue);
+  --secondary: var(--red);
   --disabled: rgb(214, 214, 214);
+
+  --blue: rgb(10, 96, 255);
+  --green: rgb(10, 255, 124);
+  --red: rgb(255, 10, 108);
+  --yellow: rgb(255, 230, 10);
+  --pink: rgb(251, 10, 255);
+  --purple: rgb(190, 10, 255);
 }
 
 * {

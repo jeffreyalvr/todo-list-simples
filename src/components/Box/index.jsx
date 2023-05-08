@@ -23,7 +23,11 @@ const Box = () => {
         todoList={todoList}
         setTodoList={setTodoList}
       />
-      <BoxContent todoList={todoList} setTodoList={setTodoList} />
+      <BoxContent
+        todoList={todoList}
+        setTodoList={setTodoList}
+        activeMenu={activeMenu}
+      />
     </main>
   );
 };
