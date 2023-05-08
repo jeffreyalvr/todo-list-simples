@@ -47,6 +47,7 @@ const Home = () => {
       <Nav
         handleThemeColor={handleThemeColor}
         handleDarkTheme={handleDarkTheme}
+        darkTheme={darkTheme}
       />
       <Box primaryColor={primaryColor} darkTheme={darkTheme} />
     </div>

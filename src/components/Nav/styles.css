@@ -12,14 +12,21 @@ nav {
 nav .temas,
 nav .colors {
   display: flex;
+  align-items: center;
 }
 
-nav .temas .item.light {
-  background-color: rgb(98, 97, 81);
+nav .temas {
+  background-color: #51515173;
+  border-radius: 25px;
+  padding: 5px;
 }
 
-nav .temas .item.dark {
+nav .temas .item.active {
   background-color: rgb(222, 222, 222);
+}
+
+nav .temas .item.active img {
+  filter: invert(60%);
 }
 
 nav .temas .item,

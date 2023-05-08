@@ -1,16 +1,16 @@
-import React from "react";
+import { useState, useEffect } from "react";
 
 import light_icon from "../../assets/icons/light.png";
 import dark_icon from "../../assets/icons/dark.png";
 
 import "./styles.css";
 
-const index = ({ handleThemeColor, handleDarkTheme }) => {
+const Nav = ({ handleThemeColor, handleDarkTheme, darkTheme }) => {
   return (
     <nav>
       <div className="temas">
         <div
-          className="item light"
+          className={`item light ${!darkTheme ? "active" : ""}`}
           alt="tema light"
           title="tema light"
           onClick={(e) => handleDarkTheme(false)}
@@ -18,7 +18,7 @@ const index = ({ handleThemeColor, handleDarkTheme }) => {
           <img src={light_icon} />
         </div>
         <div
-          className="item dark"
+          className={`item dark ${darkTheme ? "active" : ""}`}
           alt="tema dark"
           title="tema dark"
           onClick={(e) => handleDarkTheme(true)}
@@ -68,4 +68,4 @@ const index = ({ handleThemeColor, handleDarkTheme }) => {
   );
 };
 
-export default index;
+export default Nav;
