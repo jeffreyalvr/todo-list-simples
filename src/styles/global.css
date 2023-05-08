@@ -59,6 +59,30 @@ body {
   flex-direction: column;
 }
 
+.red {
+  --primary: var(--red) !important;
+}
+
+.green {
+  --primary: var(--green) !important;
+}
+
+.blue {
+  --primary: var(--blue) !important;
+}
+
+.yellow {
+  --primary: var(--yellow) !important;
+}
+
+.pink {
+  --primary: var(--pink) !important;
+}
+
+.purple {
+  --primary: var(--purple) !important;
+}
+
 @media only screen and (max-width: 550px) {
   body {
     justify-content: unset;

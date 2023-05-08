@@ -5,12 +5,17 @@ import dark_icon from "../../assets/icons/dark.png";
 
 import "./styles.css";
 
-const Nav = ({ handleThemeColor, handleDarkTheme, darkTheme }) => {
+const Nav = ({
+  handleThemeColor,
+  handleDarkTheme,
+  primaryColor,
+  darkTheme,
+}) => {
   return (
     <nav>
       <div className="temas">
         <div
-          className={`item light ${!darkTheme ? "active" : ""}`}
+          className={`item light ${primaryColor} ${!darkTheme ? "active" : ""}`}
           alt="tema light"
           title="tema light"
           onClick={(e) => handleDarkTheme(false)}
@@ -18,7 +23,7 @@ const Nav = ({ handleThemeColor, handleDarkTheme, darkTheme }) => {
           <img src={light_icon} />
         </div>
         <div
-          className={`item dark ${darkTheme ? "active" : ""}`}
+          className={`item dark ${primaryColor} ${darkTheme ? "active" : ""} `}
           alt="tema dark"
           title="tema dark"
           onClick={(e) => handleDarkTheme(true)}

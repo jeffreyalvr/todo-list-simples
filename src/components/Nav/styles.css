@@ -22,11 +22,11 @@ nav .temas {
 }
 
 nav .temas .item.active {
-  background-color: rgb(222, 222, 222);
+  background-color: var(--primary);
 }
 
 nav .temas .item.active img {
-  filter: invert(60%);
+  filter: invert(100%);
 }
 
 nav .temas .item,
@@ -41,26 +41,26 @@ nav .colors .item {
   justify-content: center;
 }
 
-nav .colors .item.red {
+nav .colors .red {
   background-color: var(--red);
 }
 
-nav .colors .item.green {
+nav .colors .green {
   background-color: var(--green);
 }
 
-nav .colors .item.blue {
+nav .colors .blue {
   background-color: var(--blue);
 }
 
-nav .colors .item.yellow {
+nav .colors .yellow {
   background-color: var(--yellow);
 }
 
-nav .colors .item.pink {
+nav .colors .pink {
   background-color: var(--pink);
 }
 
-nav .colors .item.purple {
+nav .colors .purple {
   background-color: var(--purple);
 }
