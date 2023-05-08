@@ -7,10 +7,8 @@ const BoxHeader = ({
   activeMenu,
   setActiveMenu,
   menus,
-  todoList,
-  setTodoList,
   primaryColor,
-  darkTheme,
+  addToList,
 }) => {
   const changeActiveMenu = (index) => {
     setActiveMenu(index);
@@ -18,16 +16,6 @@ const BoxHeader = ({
 
   const handleTextInputChange = (e) => {
     setTodoText(e.target.value);
-  };
-
-  const addToList = () => {
-    const novaMeta = {
-      description: todoText,
-      complete: false,
-      id: todoList.length + 1,
-    };
-    setTodoList([...todoList, novaMeta]);
-    setTodoText("");
   };
 
   const handleKeyDown = (e) => {

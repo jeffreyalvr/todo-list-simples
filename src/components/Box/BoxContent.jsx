@@ -2,23 +2,10 @@ import delete_icon from "../../assets/icons/delete.png";
 
 const BoxContent = ({
   todoList,
-  setTodoList,
-  activeMenu,
   primaryColor,
-  darkTheme,
+  removeFromList,
+  toggleTodoStatus,
 }) => {
-  const toggleTodoStatus = (id) => {
-    let newList = [...todoList];
-
-    for (let i in newList) {
-      if (newList[i].id === id) {
-        newList[i].complete = !newList[i].complete;
-      }
-    }
-
-    setTodoList(newList);
-  };
-
   return (
     <div className="box-content">
       {todoList == "" ? (
@@ -35,7 +22,7 @@ const BoxContent = ({
               />
               <span className={`checkmark ${primaryColor}`}></span>
             </label>
-            <div className="remover">
+            <div className="remover" onClick={(e) => removeFromList(item.id)}>
               <img src={delete_icon} alt="remover" title="Remover item" />
             </div>
           </div>
