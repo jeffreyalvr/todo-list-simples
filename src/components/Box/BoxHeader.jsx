@@ -8,7 +8,7 @@ const BoxHeader = ({
   setActiveMenu,
   menus,
   primaryColor,
-  addToList,
+  adicionarNaLista,
 }) => {
   const changeActiveMenu = (index) => {
     setActiveMenu(index);
@@ -22,7 +22,7 @@ const BoxHeader = ({
     if (!todoText) return;
 
     // Salva o state  ao teclar ENTER
-    if (e.keyCode == 13) addToList();
+    if (e.keyCode == 13) adicionarNaLista();
   };
 
   return (

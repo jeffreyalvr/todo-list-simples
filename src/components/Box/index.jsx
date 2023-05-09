@@ -12,30 +12,39 @@ const Box = ({ primaryColor, darkTheme }) => {
   const menus = ["todas", "pendentes", "completadas"];
   const [activeMenu, setActiveMenu] = useState(0);
 
-  const addToList = () => {
-    const novaMeta = {
-      description: todoText,
-      complete: false,
-      id: todoList.length + 1,
-    };
-    setTodoList([...todoList, novaMeta]);
+  const limparInput = () => {
     setTodoText("");
   };
 
-  const removeFromList = (id) => {
-    alert(id);
+  const adicionarNaLista = () => {
+    let ultimoIdUsado;
+
+    todoList.length <= 0
+      ? (ultimoIdUsado = -1)
+      : (ultimoIdUsado = Math.max(...todoList.map((item) => item.id)));
+
+    const novaMeta = {
+      descricao: todoText,
+      completo: false,
+      id: ultimoIdUsado + 1,
+    };
+    setTodoList([...todoList, novaMeta]);
+
+    limparInput();
   };
 
-  const toggleTodoStatus = (id) => {
-    let newList = [...todoList];
+  const removerDaLista = (id) => {};
 
-    for (let i in newList) {
-      if (newList[i].id === id) {
-        newList[i].complete = !newList[i].complete;
+  const toggleTodoStatus = (id) => {
+    let novaLista = [...todoList];
+
+    for (let i in novaLista) {
+      if (novaLista[i].id === id) {
+        novaLista[i].completo = !novaLista[i].completo;
       }
     }
 
-    setTodoList(newList);
+    setTodoList(novaLista);
   };
 
   return (
@@ -47,14 +56,14 @@ const Box = ({ primaryColor, darkTheme }) => {
         activeMenu={activeMenu}
         setActiveMenu={setActiveMenu}
         primaryColor={primaryColor}
-        addToList={addToList}
+        adicionarNaLista={adicionarNaLista}
       />
       <BoxContent
         todoList={todoList}
         setTodoList={setTodoList}
         activeMenu={activeMenu}
         primaryColor={primaryColor}
-        removeFromList={removeFromList}
+        removerDaLista={removerDaLista}
         toggleTodoStatus={toggleTodoStatus}
       />
     </main>
