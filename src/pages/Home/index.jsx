@@ -4,8 +4,8 @@ import Nav from "../../components/Nav";
 import Box from "../../components/Box";
 
 const Home = () => {
-  const [primaryColor, setPrimaryColor] = useState("blue");
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [primaryColor, setPrimaryColor] = useState("green");
+  const [darkTheme, setDarkTheme] = useState(true);
 
   useEffect(() => {
     if (darkTheme === true) {
@@ -35,6 +35,8 @@ const Home = () => {
       case "purple":
         setPrimaryColor("purple");
         break;
+      default:
+        setPrimaryColor("blue");
     }
   };
 

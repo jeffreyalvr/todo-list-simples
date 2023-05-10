@@ -7,7 +7,20 @@ import BoxHeader from "./BoxHeader";
 
 const Box = ({ primaryColor, darkTheme }) => {
   const [todoText, setTodoText] = useState("");
-  const [todoList, setTodoList] = useState([]);
+  const [todoList, setTodoList] = useState([
+    { id: 1, completo: false, descricao: "aaaaaaaaaaaaaaaaaaaaaaa" },
+    { id: 2, completo: false, descricao: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" },
+    {
+      id: 3,
+      completo: false,
+      descricao: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    },
+    {
+      id: 4,
+      completo: false,
+      descricao: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    },
+  ]);
 
   const menus = ["todas", "pendentes", "completadas"];
   const [activeMenu, setActiveMenu] = useState(0);
