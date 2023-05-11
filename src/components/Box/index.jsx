@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "./styles.css";
 
@@ -7,20 +7,11 @@ import BoxHeader from "./BoxHeader";
 
 const Box = ({ primaryColor, darkTheme }) => {
   const [todoText, setTodoText] = useState("");
-  const [todoList, setTodoList] = useState([
-    { id: 1, completo: false, descricao: "aaaaaaaaaaaaaaaaaaaaaaa" },
-    { id: 2, completo: false, descricao: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" },
-    {
-      id: 3,
-      completo: false,
-      descricao: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    },
-    {
-      id: 4,
-      completo: false,
-      descricao: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    },
-  ]);
+  const [todoList, setTodoList] = useState([]);
+
+  useEffect(() => {
+    console.table(todoList);
+  }, [todoList]);
 
   const menus = ["todas", "pendentes", "completadas"];
   const [activeMenu, setActiveMenu] = useState(0);
@@ -30,23 +21,22 @@ const Box = ({ primaryColor, darkTheme }) => {
   };
 
   const adicionarNaLista = () => {
-    let ultimoIdUsado;
-
-    todoList.length <= 0
-      ? (ultimoIdUsado = -1)
-      : (ultimoIdUsado = Math.max(...todoList.map((item) => item.id)));
+    let ultimoIdUsado = Math.max(...todoList.map((item) => item.id));
 
     const novaMeta = {
       descricao: todoText,
       completo: false,
-      id: ultimoIdUsado + 1,
+      id: ultimoIdUsado <= 0 ? 1 : ultimoIdUsado + 1,
     };
     setTodoList([...todoList, novaMeta]);
 
     limparInput();
   };
 
-  const removerDaLista = (id) => {};
+  const removerDaLista = (id) => {
+    let listaAposRemocao = todoList.filter((item) => item.id != id);
+    setTodoList(listaAposRemocao);
+  };
 
   const toggleTodoStatus = (id) => {
     let novaLista = [...todoList];
