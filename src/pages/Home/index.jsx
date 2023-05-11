@@ -4,8 +4,8 @@ import Nav from "../../components/Nav";
 import Box from "../../components/Box";
 
 const Home = () => {
-  const [primaryColor, setPrimaryColor] = useState("green");
-  const [darkTheme, setDarkTheme] = useState(true);
+  const [primaryColor, setPrimaryColor] = useState("blue");
+  const [darkTheme, setDarkTheme] = useState(false);
 
   useEffect(() => {
     if (darkTheme === true) {
@@ -13,7 +13,18 @@ const Home = () => {
     } else {
       document.body.style.backgroundColor = `var(--${primaryColor})`;
     }
+
+    carregarCorLS();
   }, [darkTheme, primaryColor]);
+
+  const editaCorLS = (cor) => {
+    localStorage.setItem("cor", cor);
+  };
+
+  const carregarCorLS = () => {
+    if (localStorage.getItem("cor"))
+      handleThemeColor(localStorage.getItem("cor"));
+  };
 
   const handleThemeColor = (color) => {
     switch (color) {
@@ -38,6 +49,8 @@ const Home = () => {
       default:
         setPrimaryColor("blue");
     }
+
+    editaCorLS(color);
   };
 
   const handleDarkTheme = (state) => {

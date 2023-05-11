@@ -9,12 +9,34 @@ const Box = ({ primaryColor, darkTheme }) => {
   const [todoText, setTodoText] = useState("");
   const [todoList, setTodoList] = useState([]);
 
+  // INFO: apenas para fins de debug
   useEffect(() => {
     console.table(todoList);
   }, [todoList]);
 
   const menus = ["todas", "pendentes", "completadas"];
   const [activeMenu, setActiveMenu] = useState(0);
+
+  const verificaLocalStorage = () => {
+    if (!localStorage.length) return;
+
+    //setTodoList(localStorage.getItem(items));
+  };
+
+  const carregaItensLS = () => {
+    if (localStorage.length) {
+    }
+  };
+
+  const adicionaItensLS = (item) => {
+    localStorage.setItem(`${item.id}_desc`, item.descricao);
+    localStorage.setItem(`${item.id}_state`, item.completo);
+  };
+
+  const removeItensLS = (id) => {
+    localStorage.removeItem(`${id}_desc`);
+    localStorage.removeItem(`${id}_state`);
+  };
 
   const limparInput = () => {
     setTodoText("");
@@ -30,11 +52,16 @@ const Box = ({ primaryColor, darkTheme }) => {
     };
     setTodoList([...todoList, novaMeta]);
 
+    adicionaItensLS(novaMeta);
+
     limparInput();
   };
 
   const removerDaLista = (id) => {
     let listaAposRemocao = todoList.filter((item) => item.id != id);
+
+    removeItensLS(id);
+
     setTodoList(listaAposRemocao);
   };
 
