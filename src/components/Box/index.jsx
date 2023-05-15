@@ -7,29 +7,20 @@ import BoxHeader from "./BoxHeader";
 
 const Box = ({ primaryColor, darkTheme }) => {
   const [todoText, setTodoText] = useState("");
-  const [todoList, setTodoList] = useState([]);
+  const [todoList, setTodoList] = useState(
+    JSON.parse(localStorage.getItem("todos"))
+  );
 
-  // INFO: apenas para fins de debug
   useEffect(() => {
-    console.table(todoList);
+    localStorage.getItem("todos", setTodoList(todoList));
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todoList));
   }, [todoList]);
 
   const menus = ["todas", "pendentes", "completadas"];
   const [activeMenu, setActiveMenu] = useState(0);
-
-  const verificaLocalStorage = () => {};
-
-  const carregaItensLS = () => {};
-
-  const adicionaItensLS = (item) => {
-    localStorage.setItem(`${item.id}_desc`, item.descricao);
-    localStorage.setItem(`${item.id}_state`, item.completo);
-  };
-
-  const removeItensLS = (id) => {
-    localStorage.removeItem(`${id}_desc`);
-    localStorage.removeItem(`${id}_state`);
-  };
 
   const limparInput = () => {
     setTodoText("");
