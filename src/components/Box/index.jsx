@@ -8,7 +8,7 @@ import BoxHeader from "./BoxHeader";
 const Box = ({ primaryColor, darkTheme }) => {
   const [todoText, setTodoText] = useState("");
   const [todoList, setTodoList] = useState(
-    JSON.parse(localStorage.getItem("todos"))
+    JSON.parse(localStorage.getItem("todos")) || []
   );
 
   useEffect(() => {
