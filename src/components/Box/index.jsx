@@ -17,16 +17,9 @@ const Box = ({ primaryColor, darkTheme }) => {
   const menus = ["todas", "pendentes", "completadas"];
   const [activeMenu, setActiveMenu] = useState(0);
 
-  const verificaLocalStorage = () => {
-    if (!localStorage.length) return;
+  const verificaLocalStorage = () => {};
 
-    //setTodoList(localStorage.getItem(items));
-  };
-
-  const carregaItensLS = () => {
-    if (localStorage.length) {
-    }
-  };
+  const carregaItensLS = () => {};
 
   const adicionaItensLS = (item) => {
     localStorage.setItem(`${item.id}_desc`, item.descricao);
@@ -52,7 +45,7 @@ const Box = ({ primaryColor, darkTheme }) => {
     };
     setTodoList([...todoList, novaMeta]);
 
-    adicionaItensLS(novaMeta);
+    // adicionaItensLS(novaMeta);
 
     limparInput();
   };
@@ -60,7 +53,7 @@ const Box = ({ primaryColor, darkTheme }) => {
   const removerDaLista = (id) => {
     let listaAposRemocao = todoList.filter((item) => item.id != id);
 
-    removeItensLS(id);
+    // removeItensLS(id);
 
     setTodoList(listaAposRemocao);
   };
