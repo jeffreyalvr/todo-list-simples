@@ -25,6 +25,7 @@ const Box = ({ primaryColor, darkTheme }) => {
     { id: 2, texto: "completadas" },
   ];
   const [activeMenu, setActiveMenu] = useState(0);
+  const [qtdMetasNaLista, setQtdMetasNaLista] = useState(0);
 
   const limparInput = () => {
     setTodoText("");
@@ -75,6 +76,7 @@ const Box = ({ primaryColor, darkTheme }) => {
         setActiveMenu={setActiveMenu}
         primaryColor={primaryColor}
         adicionarNaLista={adicionarNaLista}
+        qtdMetasNaLista={qtdMetasNaLista}
       />
       <BoxContent
         todoList={todoList}
@@ -82,6 +84,7 @@ const Box = ({ primaryColor, darkTheme }) => {
         primaryColor={primaryColor}
         removerDaLista={removerDaLista}
         toggleTodoStatus={toggleTodoStatus}
+        setQtdMetasNaLista={setQtdMetasNaLista}
       />
     </main>
   );

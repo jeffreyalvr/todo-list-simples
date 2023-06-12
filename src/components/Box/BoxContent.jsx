@@ -7,14 +7,27 @@ const BoxContent = ({
   removerDaLista,
   toggleTodoStatus,
   activeMenu,
+  setQtdMetasNaLista,
 }) => {
   const [lista, setLista] = useState([]);
 
   useEffect(() => {
-    if (activeMenu === 0) setLista(todoList);
-    if (activeMenu === 1)
-      setLista(todoList.filter((i) => i.completo === false));
-    if (activeMenu === 2) setLista(todoList.filter((i) => i.completo === true));
+    if (activeMenu === 0) {
+      setLista(todoList);
+      setQtdMetasNaLista(todoList.length);
+    }
+
+    if (activeMenu === 1) {
+      const temp = todoList.filter((i) => i.completo === false);
+      setLista(temp);
+      setQtdMetasNaLista(temp.length);
+    }
+
+    if (activeMenu === 2) {
+      const temp = todoList.filter((i) => i.completo === true);
+      setLista(temp);
+      setQtdMetasNaLista(temp.length);
+    }
   }, [activeMenu, todoList]);
 
   return (

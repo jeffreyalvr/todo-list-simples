@@ -9,6 +9,7 @@ const BoxHeader = ({
   menus,
   primaryColor,
   adicionarNaLista,
+  qtdMetasNaLista,
 }) => {
   const changeActiveMenu = (index) => {
     setActiveMenu(index);
@@ -22,7 +23,10 @@ const BoxHeader = ({
     if (!todoText) return;
 
     // Salva o state  ao teclar ENTER
-    if (e.keyCode == 13) adicionarNaLista();
+    if (e.keyCode == 13) {
+      adicionarNaLista();
+      setActiveMenu(0);
+    }
   };
 
   return (
@@ -44,7 +48,10 @@ const BoxHeader = ({
             className={menu.id === activeMenu ? "active" : ""}
             onClick={() => changeActiveMenu(menu.id)}
           >
-            {menu.texto}
+            {menu.texto}{" "}
+            {menu.id === activeMenu && qtdMetasNaLista > 0
+              ? "(" + qtdMetasNaLista + ")"
+              : ""}
           </li>
         ))}
       </ul>
