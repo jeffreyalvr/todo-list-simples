@@ -50,6 +50,7 @@ body {
   height: 100vh;
   width: 100%;
   background-color: var(--primary);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .wrapper {
