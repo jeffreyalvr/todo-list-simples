@@ -29,9 +29,9 @@ const BoxContent = ({
 
   return (
     <div className="box-content">
-      {todoList === "" ? (
+      {todoList == "" ? (
         <p>Crie uma tarefa para começar o seu dia!</p>
-      ) : (
+      ) : lista != "" ? (
         lista.map((listItem) => {
           return (
             <div className="item" key={listItem.id}>
@@ -55,6 +55,8 @@ const BoxContent = ({
             </div>
           );
         })
+      ) : (
+        <p>Nenhuma meta nesta categoria.</p>
       )}
     </div>
   );
