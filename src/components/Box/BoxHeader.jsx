@@ -38,13 +38,13 @@ const BoxHeader = ({
         />
       </div>
       <ul className="menu">
-        {menus.map((menu, index) => (
+        {menus.map((menu) => (
           <li
-            onClick={() => changeActiveMenu(index)}
-            className={index === activeMenu ? "active" : ""}
-            key={index}
+            key={menu.id}
+            className={menu.id === activeMenu ? "active" : ""}
+            onClick={() => changeActiveMenu(menu.id)}
           >
-            {menu}
+            {menu.texto}
           </li>
         ))}
       </ul>

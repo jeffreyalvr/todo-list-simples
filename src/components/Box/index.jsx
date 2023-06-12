@@ -19,7 +19,11 @@ const Box = ({ primaryColor, darkTheme }) => {
     localStorage.setItem("todos", JSON.stringify(todoList));
   }, [todoList]);
 
-  const menus = ["todas", "pendentes", "completadas"];
+  const menus = [
+    { id: 0, texto: "todas" },
+    { id: 1, texto: "pendentes" },
+    { id: 2, texto: "completadas" },
+  ];
   const [activeMenu, setActiveMenu] = useState(0);
 
   const limparInput = () => {
@@ -74,7 +78,6 @@ const Box = ({ primaryColor, darkTheme }) => {
       />
       <BoxContent
         todoList={todoList}
-        setTodoList={setTodoList}
         activeMenu={activeMenu}
         primaryColor={primaryColor}
         removerDaLista={removerDaLista}
