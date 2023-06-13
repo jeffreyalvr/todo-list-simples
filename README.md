@@ -14,7 +14,14 @@ Uma nova versão será feita com recursos adicionais.
 
 ### Capturas de tela
 
-// A serem adicionados posteriormente.
+[ Listagem de todas as metas ]
+![1](https://github.com/jeffreyalvr/todo-list-simples/assets/17326060/a9caebed-08ac-4f3a-a691-a8be2ed62119)
+
+[ Alteração de aba com conteúdo vazio ]
+![2](https://github.com/jeffreyalvr/todo-list-simples/assets/17326060/9cd16a6c-ad31-404e-961c-c57557203177)
+
+[ Listagem de metas concluídas com tema diferente ]
+![3](https://github.com/jeffreyalvr/todo-list-simples/assets/17326060/98c59118-b0aa-49f7-8de7-27963fdf404d)
 
 ## Acesso direto ao projeto em produção
 
